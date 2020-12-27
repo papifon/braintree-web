@@ -147,7 +147,7 @@ function create(options) {
 
       isProduction = gwConfig.environment === 'production';
 
-      if (isProduction && !isHTTPS()) {
+      if (isProduction && !isHTTPS() && !window.cordova) {
         error = errors.THREEDS_HTTPS_REQUIRED;
       }
 
